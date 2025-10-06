@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wonder Tourism | Global Travel Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      scroll-behavior: smooth;
+      background: url("images/background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    header {
+      background: rgba(138, 43, 226, 0.8);
+      color: #fff;
+      padding: 30px 10px;
+      text-align: left;
+      backdrop-filter: blur(5px);
+      font-size: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(147, 112, 219, 0.85);
+      padding: 10px 30px;
+      flex-wrap: wrap;
+      backdrop-filter: blur(5px);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe4ff;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .search-container input {
+      border: none;
+      outline: none;
+      padding: 8px 12px;
+      font-size: 15px;
+    }
+
+    .search-container button {
+      background: #9370DB;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 0 25px 25px 0;
+    }
+
+    .search-container button:hover {
+      background: #7B68EE;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(230, 230, 250, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      color: #6a0dad;
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 1.8em;
+    }
+
+    .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 240, 255, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+      scroll-margin-top: 150px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+      color: #6a0dad;
+    }
+
+    .card p {
+      padding: 0 10px 15px;
+      font-size: 15px;
+    }
+
+    .card button {
+      background: #9370DB;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background: #7B68EE;
+    }
+
+    footer {
+      background: rgba(147, 112, 219, 0.85);
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 14px;
+      backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🌏 Wonder Tourism</h1>
+</header>
+
+<nav>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#discover">Discover</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search a place...">
+    <button type="button" onclick="searchPlace()">Search</button>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h2 id="destinations" class="section-title">Top Destinations Around the World</h2>
+    <div class="destinations">
+
+      <div class="card" id="paris">
+        <img src="images/paris.jpeg" alt="Paris">
+        <h3>Paris, France</h3>
+        <p>The city of lights, home to the Eiffel Tower and art museums.</p>
+        <a href="paris.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="newyork">
+        <img src="images/newyork.jpeg" alt="New York">
+        <h3>New York, USA</h3>
+        <p>The city that never sleeps, famous for skyline, Broadway, and culture.</p>
+        <a href="newyork.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="tokyo">
+        <img src="images/tokyo.jpeg" alt="Tokyo">
+        <h3>Tokyo, Japan</h3>
+        <p>Blend of tradition and modernity, with vibrant food and technology.</p>
+        <a href="tokyo.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="rome">
+        <img src="images/rome.jpeg" alt="Rome">
+        <h3>Rome, Italy</h3>
+        <p>City of ancient history, art, and the Colosseum.</p>
+        <a href="rome.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="london">
+        <img src="images/london.jpeg" alt="London">
+        <h3>London, UK</h3>
+        <p>Home of Big Ben, Buckingham Palace, and rich culture.</p>
+        <a href="london.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="sydney">
+        <img src="images/sydney.jpeg" alt="Sydney">
+        <h3>Sydney, Australia</h3>
+        <p>Famous for Sydney Opera House and beautiful beaches.</p>
+        <a href="sydney.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="dubai">
+        <img src="images/dubai.jpeg" alt="Dubai">
+        <h3>Dubai, UAE</h3>
+        <p>City of luxury, Burj Khalifa, and futuristic architecture.</p>
+        <a href="dubai.html"><button>Read More</button></a>
+      </div>
+
+      <div class="card" id="rio">
+        <img src="images/brazil.jpeg" alt="Rio de Janeiro">
+        <h3>Rio de Janeiro, Brazil</h3>
+        <p>Known for Christ the Redeemer, beaches, and carnival.</p>
+        <a href="rio.html"><button>Read More</button></a>
+      </div>
+
+    </div>
+
+    <h2 id="discover" class="section-title">Discover Amazing Places</h2>
+    <p style="text-align:center;">Explore the world’s most iconic destinations with Wonder Tourism.</p>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Wonder Tourism. All rights reserved.
+</footer>
+
+<script>
+  function searchPlace() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+    const destinations = {
+      "paris": "paris.html",
+      "new york": "newyork.html",
+      "tokyo": "tokyo.html",
+      "rome": "rome.html",
+      "london": "london.html",
+      "sydney": "sydney.html",
+      "dubai": "dubai.html",
+      "rio": "rio.html"
+    };
+
+    if (destinations[input]) {
+      // Redirect to the corresponding page
+      window.location.href = destinations[input];
+    } else {
+      alert("Place not found! Try Paris, New York, Tokyo, Rome, London, Sydney, Dubai, or Rio.");
+    }
+  }
+</script>
+</body>
+</html>
